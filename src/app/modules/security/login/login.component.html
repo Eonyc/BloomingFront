@@ -1,0 +1,44 @@
+<main>
+  <div class="section center"></div>
+  <h5 class="indigo-text center">Please, login into your account</h5>
+  <div class="section center"></div>
+  <div class="container center ">
+    <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+      <form class="col s12" [formGroup]="form">
+        <div class='row'>
+          <div class='col s12'>
+
+          </div>
+        </div>
+        <div class='row'>
+          <div class='input-field col s12'>
+            <input formControlName = "username" class='validate' type='text' name='usuario' id='usuario' />
+            <label for='usuario'>Enter your email</label>
+            <div *ngIf="GetForm['username'].errors && (GetForm['username'].dirty || GetForm['usename'])" class="error-message">
+              <label>Ingrese un usuario valido</label>
+            </div>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='input-field col s12'>
+            <input formControlName = "password" class='validate' type='password' name='password' id='password' />
+            <label for='password'>Enter your password</label>
+            <div *ngIf="GetForm['password'].errors && (GetForm['password'].dirty || GetForm['password'])" class="error-message">
+              <label>Ingrese una contraseña valida</label>
+            </div>
+          </div>
+          <label style='float: right;'>
+            <a class='pink-text' routerLink='/security/rest-password'><b>Forgot Password?</b></a>
+          </label>
+        </div>
+        <br/>
+        <div class='row center'>
+          <button [disabled]="GetForm['username'].errors || GetForm['password'].errors" type='button' (click)="Login()" name='btn_login'
+                   class='col s12 btn btn-large waves-effect indigo'>Login</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <a href="#!">Create account</a>
+            <div class="section"></div>
+          

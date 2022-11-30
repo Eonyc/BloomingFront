@@ -1,0 +1,27 @@
+
+<nav>
+    <div class="nav-wrapper">
+      <a routerLink="home" class="brand-logo">inicio</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li *ngIf="session"><a routerLink="parameters/brand-list">Marca</a></li>
+        <li *ngIf="session"><a routerLink="parameters/category-list">Categoria</a></li>
+        <li *ngIf="session"><a routerLink="product/product-list">Producto</a></li>
+        <li *ngIf="session"><a routerLink="security/user-list">Usuario</a></li>
+        <li *ngIf="session"><a routerLink="reports/reports-list">Reportes</a></li>
+        <li *ngIf="!session"><a routerLink="security/login">Login</a></li>
+        <li *ngIf="session"><a routerLink="security/logout">Logout</a></li>
+        <li *ngIf="session"><a routerLink="security/rest-password">Recuperar contraseña</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+    <li *ngIf="session"><a routerLink="parameters/brand-list">Marca</a></li>
+    <li *ngIf="session"><a routerLink="parameters/category-list">Categoria</a></li>
+    <li *ngIf="session"><a routerLink="product/product-list">Producto</a></li>
+    <li *ngIf="session"><a routerLink="security/user-list">Usuario</a></li>
+    <li *ngIf="session"><a routerLink="reports/reports-list">Reportes</a></li>
+    <li *ngIf="!session"><a routerLink="security/login">Login</a></li>
+    <li *ngIf="session"><a routerLink="security/logout">Logout</a></li>
+  </ul>

@@ -1,0 +1,30 @@
+<div class="row">
+    <input type="hidden" formControlName="id" />
+    <div class="row">
+        <div class="input-field col s12">
+            <label>¿Está seguro de eliminar el registro?</label>
+           <br/>
+           <ul>
+                <li>
+                    id: {{id}}
+                </li>
+                <li>
+                    Nombre {{name}}
+                </li>
+            </ul>
+            <label for="name" class="active">Nombre</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s2">
+            <a routerLink="/parameters/brand-list" class="btn btn-warning red">
+                Cancelar
+            </a>
+        </div>
+        <div class="input-field col s10">
+            <button (click)="RemoveRecord()" class="btn btn-success">
+                Eliminar
+            </button>
+        </div>
+    </div>
+</div>
